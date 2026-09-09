@@ -6,7 +6,7 @@
   'use strict';
 
   // Apps Script 웹앱 배포 URL. README의 배포 안내를 따라 받은 URL을 넣는다.
-  var ENDPOINT = '';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzT4Azj3Mqyk45FqdlYPkYu-sS0frSsllweu8Pig2GRdB4oWU-YwUFAa-hMnrKTc66n/exec';
 
   /* ── 탭 ─────────────────────────────────────── */
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
