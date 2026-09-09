@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>클로세이 closai | AI Automation Partner</title>
+  <meta name="description" content="클로세이(closai)는 1인·소규모 사업자의 반복 업무를 대면 진단으로 구조화하고, 고객 데이터로 동작하는 맞춤형 AI 업무 대시보드를 구축·납품하는 AI 자동화 파트너입니다.">
+  <link rel="canonical" href="https://closai.kr/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="closai">
+  <meta property="og:title" content="클로세이 closai | AI Automation Partner">
+  <meta property="og:description" content="반복 업무를 대면 진단으로 구조화하고, 고객 데이터로 동작하는 맞춤형 AI 업무 대시보드를 구축·납품합니다.">
+  <meta property="og:url" content="https://closai.kr/">
+  <meta property="og:image" content="https://closai.kr/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Caveat:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "클로세이",
+    "alternateName": "closai",
+    "url": "https://closai.kr/",
+    "logo": "https://closai.kr/assets/icon-512.png",
+    "email": "claire@closai.kr",
+    "foundingDate": "2026-07-28",
+    "address": { "@type": "PostalAddress", "addressLocality": "마포구", "addressRegion": "서울특별시", "addressCountry": "KR" },
+    "founder": [ { "@type": "Person", "name": "이나경" }, { "@type": "Person", "name": "남지영" } ],
+    "sameAs": [ "https://www.instagram.com/closai.kr" ],
+    "slogan": "CLOSAI, closer than you think."
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap-wide">
+    <a class="brand" href="/" aria-label="closai 홈">
+      <img src="/assets/logo-symbol.png" srcset="/assets/logo-symbol@2x.png 2x" alt="closai">
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="/products.html">상품</a>
+      <a href="/team.html">팀</a>
+      <a href="/log.html">기록</a>
+      <a class="cta" href="/#diagnosis">진단하기</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- 히어로: 명함 앞면(you ↔ closai 거리) 재현 -->
+  <section class="hero wrap-wide" aria-label="소개">
+    <div class="hero-card">
+      <div class="hero-you" aria-hidden="true">you</div>
+      <div class="hero-ruler" aria-hidden="true">
+        <div class="hero-mm"><s>cm</s><span>mm</span></div>
+      </div>
+      <h1 class="hero-name"><img src="/assets/wordmark.png" srcset="/assets/wordmark@2x.png 2x" alt="closai">,</h1>
+      <div class="hero-tagline">closer than you think</div>
+    </div>
+
+    <div class="hero-meta">
+      <span class="label">AI Automation Partner</span>
+      <!-- 정본 정의 문장 자리. 9/3 확정 원문을 받으면 아래 문단을 글자 그대로 교체한다. -->
+      <p class="hero-definition">
+        클로세이(closai)는 1인·소규모 사업자의 반복 업무를 <strong>1회 대면 진단</strong>으로 구조화하고,
+        고객의 데이터로 동작하는 <strong>맞춤형 AI 업무 대시보드</strong>를 구축해 납품하는 AI 자동화 파트너입니다.
+      </p>
+      <div class="contacts">
+        <span><b>E</b><a href="mailto:claire@closai.kr">claire@closai.kr</a></span>
+        <span><b>W</b>closai.kr</span>
+        <span><b>Ig</b><a href="https://www.instagram.com/closai.kr" target="_blank" rel="noopener">@closai.kr</a></span>
+      </div>
+      <a class="hero-scroll" href="#diagnosis">↓ 진단하기 · 문의하기</a>
+    </div>
+  </section>
+
+  <!-- 탭: 진단하기 / 문의하기 -->
+  <section class="tabs-section" id="diagnosis" aria-label="진단하기와 문의하기">
+    <div class="wrap">
+      <div class="tablist" role="tablist" aria-label="진단하기 또는 문의하기">
+        <button role="tab" id="tab-diagnosis" aria-selected="true" aria-controls="panel-diagnosis" data-hash="#diagnosis">진단하기</button>
+        <button role="tab" id="tab-contact" aria-selected="false" aria-controls="panel-contact" data-hash="#contact" tabindex="-1">문의하기</button>
+      </div>
+
+      <!-- 진단하기: 미니체크 17문항 3단계 -->
+      <div class="tabpanel" role="tabpanel" id="panel-diagnosis" aria-labelledby="tab-diagnosis">
+        <form id="diagnosis-form" novalidate>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <ol class="steps" aria-hidden="true"><li data-active></li><li></li><li></li></ol>
+
+          <!-- 1단계: 회사와 연락처 -->
+          <section class="form-step" data-step="1">
+            <div class="step-title">
+              <h2>회사와 연락처</h2>
+              <span class="label">1 / 3</span>
+            </div>
+            <p class="intro">2~3분이면 끝나요. 미팅 전에 어떤 일을 하시는지 미리 알아두려는 질문이에요.</p>
+
+            <div class="field">
+              <label class="q" for="company">회사·브랜드명<span class="req">*</span></label>
+              <input type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+
+            <fieldset class="field">
+              <legend class="q">업종<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="industry" value="관광·웰니스 클래스" required>관광·웰니스 클래스</label>
+                <label><input type="radio" name="industry" value="숙박·투어">숙박·투어</label>
+                <label><input type="radio" name="industry" value="뷰티·의료">뷰티·의료</label>
+                <label><input type="radio" name="industry" value="교육·코칭">교육·코칭</label>
+                <label><input type="radio" name="industry" value="온라인 판매">온라인 판매</label>
+                <label><input type="radio" name="industry" value="기타">기타</label>
+              </div>
+              <div class="other-input" data-other-for="industry" hidden>
+                <input type="text" name="industry_other" placeholder="업종을 적어주세요" aria-label="기타 업종">
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">규모<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="size" value="1인" required>1인</label>
+                <label><input type="radio" name="size" value="2~4명">2~4명</label>
+                <label><input type="radio" name="size" value="5~9명">5~9명</label>
+                <label><input type="radio" name="size" value="10명 이상">10명 이상</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="q" for="name">담당자 이름<span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="grid-2">
+              <div class="field">
+                <label class="q" for="email">이메일<span class="req">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
+              </div>
+              <div class="field">
+                <label class="q" for="phone">전화번호<span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000">
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend class="q">선호하는 연락 방법<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="contact_pref" value="이메일" required>이메일</label>
+                <label><input type="radio" name="contact_pref" value="전화">전화</label>
+                <label><input type="radio" name="contact_pref" value="카카오톡">카카오톡</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">클로세이를 어떻게 알게 되셨나요?<span class="opt">선택</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="source" value="인스타그램">인스타그램</label>
+                <label><input type="radio" name="source" value="블로그">블로그</label>
+                <label><input type="radio" name="source" value="검색">검색</label>
+                <label><input type="radio" name="source" value="AI 검색(ChatGPT 등)">AI 검색(ChatGPT 등)</label>
+                <label><input type="radio" name="source" value="소개">소개</label>
+              </div>
+            </fieldset>
+
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <span></span>
+              <button type="button" class="btn" data-next>다음</button>
+            </div>
+          </section>
+
+          <!-- 2단계: 반복 업무 체크 -->
+          <section class="form-step" data-step="2" hidden>
+            <div class="step-title">
+              <h2>반복 업무 체크</h2>
+              <span class="label">2 / 3</span>
+            </div>
+            <p class="intro">정답은 없어요. 지난 한 주를 떠올리며 있는 그대로 골라주세요.</p>
+
+            <fieldset class="field">
+              <legend class="q">지난 한 주, 시간을 가장 많이 쓴 반복 업무는요?<span class="req">*</span><span class="opt">여러 개 가능</span></legend>
+              <div class="chips">
+                <label><input type="checkbox" name="tasks" value="문의 응대(DM·카톡·이메일)">문의 응대(DM·카톡·이메일)</label>
+                <label><input type="checkbox" name="tasks" value="예약·일정 관리">예약·일정 관리</label>
+                <label><input type="checkbox" name="tasks" value="콘텐츠 제작·발행">콘텐츠 제작·발행</label>
+                <label><input type="checkbox" name="tasks" value="정산·장부">정산·장부</label>
+                <label><input type="checkbox" name="tasks" value="견적·제안서">견적·제안서</label>
+                <label><input type="checkbox" name="tasks" value="고객 후속 안내">고객 후속 안내</label>
+                <label><input type="checkbox" name="tasks" value="기타">기타</label>
+              </div>
+              <div class="other-input" data-other-for="tasks" hidden>
+                <input type="text" name="tasks_other" placeholder="어떤 업무인가요?" aria-label="기타 업무">
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="q" for="dreaded">그중 "하기 싫다, 자꾸 미룬다" 싶은 업무 하나만 적어주세요<span class="req">*</span></label>
+              <input type="text" id="dreaded" name="dreaded" required placeholder="예: 밤에 쌓인 인스타 DM에 하나씩 답장하기">
+            </div>
+
+            <fieldset class="field">
+              <legend class="q">그 업무는 일주일에 몇 번쯤 하시나요?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="frequency" value="5회 미만" data-mid="3" required>5회 미만</label>
+                <label><input type="radio" name="frequency" value="5~20회" data-mid="12">5~20회</label>
+                <label><input type="radio" name="frequency" value="20~50회" data-mid="35">20~50회</label>
+                <label><input type="radio" name="frequency" value="50회 이상" data-mid="60">50회 이상</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">한 번 처리하는 데 얼마나 걸리나요?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="duration" value="5분 미만" data-mid="3" required>5분 미만</label>
+                <label><input type="radio" name="duration" value="5~15분" data-mid="10">5~15분</label>
+                <label><input type="radio" name="duration" value="15~30분" data-mid="22">15~30분</label>
+                <label><input type="radio" name="duration" value="30분 이상" data-mid="40">30분 이상</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">열 번 하면 평소와 다르게 처리해야 하는 경우가 몇 번쯤인가요?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="exceptions" value="1번 이하" required>1번 이하</label>
+                <label><input type="radio" name="exceptions" value="2~3번">2~3번</label>
+                <label><input type="radio" name="exceptions" value="4번 이상">4번 이상</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">그 일에 쓰는 도구는요?<span class="req">*</span><span class="opt">여러 개 가능</span></legend>
+              <div class="chips">
+                <label><input type="checkbox" name="tools" value="카카오톡">카카오톡</label>
+                <label><input type="checkbox" name="tools" value="인스타 DM">인스타 DM</label>
+                <label><input type="checkbox" name="tools" value="네이버 예약">네이버 예약</label>
+                <label><input type="checkbox" name="tools" value="구글시트·엑셀">구글시트·엑셀</label>
+                <label><input type="checkbox" name="tools" value="노션">노션</label>
+                <label><input type="checkbox" name="tools" value="이메일">이메일</label>
+                <label><input type="checkbox" name="tools" value="종이·메모">종이·메모</label>
+                <label><input type="checkbox" name="tools" value="기타">기타</label>
+              </div>
+              <div class="other-input" data-other-for="tools" hidden>
+                <input type="text" name="tools_other" placeholder="어떤 도구인가요?" aria-label="기타 도구">
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="q" for="goal">3개월 뒤엔 이랬으면 좋겠다, 싶은 게 있다면요?<span class="opt">선택</span></label>
+              <textarea id="goal" name="goal" rows="3" placeholder="예: 저녁에는 폰을 안 봐도 예약이 알아서 정리돼 있으면 좋겠어요"></textarea>
+            </div>
+
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <button type="button" class="btn ghost" data-prev>이전</button>
+              <button type="button" class="btn" data-next>다음</button>
+            </div>
+          </section>
+
+          <!-- 3단계: 미팅 -->
+          <section class="form-step" data-step="3" hidden>
+            <div class="step-title">
+              <h2>미팅</h2>
+              <span class="label">3 / 3</span>
+            </div>
+            <p class="intro">진단 미팅은 한 번이에요. 미팅에서 들은 이야기로 동작하는 샘플과 리포트를 만들어 보여드려요.</p>
+
+            <fieldset class="field">
+              <legend class="q">어떤 방식이 편하세요?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="meeting" value="대면(서울)" required>대면(서울)</label>
+                <label><input type="radio" name="meeting" value="온라인">온라인</label>
+                <label><input type="radio" name="meeting" value="우선 이메일로 안내">우선 이메일로 안내</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">가능한 시간대<span class="req">*</span><span class="opt">여러 개 가능</span></legend>
+              <div class="chips">
+                <label><input type="checkbox" name="timeslot" value="평일 오전">평일 오전</label>
+                <label><input type="checkbox" name="timeslot" value="평일 오후">평일 오후</label>
+                <label><input type="checkbox" name="timeslot" value="저녁">저녁</label>
+                <label><input type="checkbox" name="timeslot" value="주말">주말</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="consent">
+                <input type="checkbox" name="consent" value="동의" required>
+                <span>진단 연락을 위해 위 정보를 수집·이용하는 데 동의합니다. 자세한 내용은 <a href="/privacy.html" target="_blank" rel="noopener">개인정보처리방침</a>을 확인해주세요.<span class="req">*</span></span>
+              </label>
+            </div>
+
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <button type="button" class="btn ghost" data-prev>이전</button>
+              <button type="submit" class="btn" data-submit>보내기</button>
+            </div>
+          </section>
+
+          <!-- 완료 화면 -->
+          <section class="form-step done" data-step="done" hidden aria-live="polite">
+            <p class="big">보내주셔서 고마워요.<br>2영업일 안에 <span data-contact-pref>이메일로</span> 연락드릴게요.</p>
+            <div class="hours" data-hours hidden></div>
+            <ol>
+              <li>담당자가 연락드려 미팅 일정을 잡아요.</li>
+              <li>진단 미팅 한 번으로 반복 업무를 함께 정리해요.</li>
+              <li>동작하는 샘플 대시보드와 진단 리포트를 보여드려요.</li>
+            </ol>
+            <p class="fallback" data-fallback hidden>전송에 문제가 있었다면 <a href="mailto:claire@closai.kr">claire@closai.kr</a>로 직접 보내주세요.</p>
+          </section>
+        </form>
+      </div>
+
+      <!-- 문의하기 -->
+      <div class="tabpanel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" hidden>
+        <form id="contact-form" novalidate>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <section class="form-step" data-step="1">
+            <div class="step-title"><h2>문의하기</h2></div>
+            <p class="intro">진단 전에 궁금한 점, 협업·제안은 여기로 남겨주세요.</p>
+            <div class="grid-2">
+              <div class="field">
+                <label class="q" for="c-name">이름<span class="req">*</span></label>
+                <input type="text" id="c-name" name="name" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label class="q" for="c-email">이메일<span class="req">*</span></label>
+                <input type="email" id="c-email" name="email" required autocomplete="email" inputmode="email">
+              </div>
+            </div>
+            <div class="field">
+              <label class="q" for="c-message">내용<span class="req">*</span></label>
+              <textarea id="c-message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="field">
+              <label class="consent">
+                <input type="checkbox" name="consent" value="동의" required>
+                <span>답변을 위해 위 정보를 수집·이용하는 데 동의합니다. <a href="/privacy.html" target="_blank" rel="noopener">개인정보처리방침</a><span class="req">*</span></span>
+              </label>
+            </div>
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <span></span>
+              <button type="submit" class="btn" data-submit>보내기</button>
+            </div>
+          </section>
+          <section class="form-step done" data-step="done" hidden aria-live="polite">
+            <p class="big">보내주셔서 고마워요.<br>2영업일 안에 이메일로 답변드릴게요.</p>
+            <p class="fallback" data-fallback hidden>전송에 문제가 있었다면 <a href="mailto:claire@closai.kr">claire@closai.kr</a>로 직접 보내주세요.</p>
+          </section>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 카테고리 카드 -->
+  <section class="cards-section" aria-label="더 알아보기">
+    <div class="wrap-wide">
+      <div class="cards">
+        <a class="card" href="/products.html">
+          <span class="label">Products</span>
+          <h3>상품</h3>
+          <p>기능 하나부터 풀 커스텀까지, 네 가지 모델.</p>
+          <span class="arrow">보기 →</span>
+        </a>
+        <a class="card" href="/team.html">
+          <span class="label">Team</span>
+          <h3>팀</h3>
+          <p>사람이 먼저 듣고, AI가 일하게 만드는 두 사람.</p>
+          <span class="arrow">보기 →</span>
+        </a>
+        <a class="card" href="/log.html">
+          <span class="label">Log</span>
+          <h3>기록</h3>
+          <p>우리가 우리 회사를 자동화하는 과정, 그대로.</p>
+          <span class="arrow">보기 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap-wide">
+    <img src="/assets/wordmark.png" srcset="/assets/wordmark@2x.png 2x" alt="closai">
+    <span class="tag">AI Automation Partner</span>
+    <div class="biz">
+      <span>클로세이(closai) · 대표 이나경 · 공동사업자 남지영</span>
+      <span>사업자등록번호 308-25-02133</span>
+      <span>서울특별시 마포구 동교로17길 67, 201호</span>
+      <span><a href="mailto:claire@closai.kr">claire@closai.kr</a></span>
+    </div>
+    <div class="links-row">
+      <a href="/privacy.html">개인정보처리방침</a>
+      <a href="https://www.instagram.com/closai.kr" target="_blank" rel="noopener">Instagram</a>
+      <span>© 2026 closai</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/form.js" defer></script>
+</body>
+</html>
