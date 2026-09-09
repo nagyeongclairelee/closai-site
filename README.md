@@ -41,7 +41,7 @@ cd closai_site && python3 -m http.server 8000
 7. 브라우저에서 그 URL을 열어 `closai form endpoint OK`가 보이는지 확인한다.
 8. `js/form.js` 맨 위 `var ENDPOINT`에 URL을 넣고 push한다. (2026-09-09 배포 완료: 시트 `closai 진단·문의 접수`, 프로젝트 `closai form`)
 
-이후 제출마다 시트의 `diagnosis` / `contact` 탭에 한 줄이 쌓이고 `claire@closai.kr`로 알림 메일이 온다.
+이후 제출마다 시트의 `diagnosis` / `contact` 탭에 한 줄이 쌓이고 `claire@closai.kr`, `closai@closai.kr`, `namdalrm@closai.kr`로 알림 메일이 온다. 수신 주소는 `Code.gs`의 `NOTIFY_TO`에서 바꾼다.
 스크립트를 고친 뒤에는 **배포 → 배포 관리 → 새 버전**으로 다시 배포해야 반영된다.
 
 ## 도메인 (가비아 DNS)

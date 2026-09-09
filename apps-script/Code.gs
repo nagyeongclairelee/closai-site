@@ -8,7 +8,7 @@
  * 배포 방법은 저장소 README.md 참고.
  */
 
-var NOTIFY_TO = 'claire@closai.kr';
+var NOTIFY_TO = 'claire@closai.kr, closai@closai.kr, namdalrm@closai.kr';
 
 // 시트 열 순서 = 폼 문항 순서. 첫 실행 때 헤더가 없으면 자동으로 만든다.
 var COLUMNS = {
