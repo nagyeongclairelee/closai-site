@@ -8,6 +8,18 @@
   // Apps Script 웹앱 배포 URL. README의 배포 안내를 따라 받은 URL을 넣는다.
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbzT4Azj3Mqyk45FqdlYPkYu-sS0frSsllweu8Pig2GRdB4oWU-YwUFAa-hMnrKTc66n/exec';
 
+  // 문구: <html lang="en">이면 영어. 폼 값 자체는 각 페이지 HTML의 value를 그대로 보낸다
+  var EN = (document.documentElement.lang || '').slice(0, 2) === 'en';
+  var T = EN ? {
+    other: 'Other', missing: 'Still empty: ', emailFmt: 'email format', consent: 'privacy consent', sending: 'Sending…',
+    hours: function (h) { return 'You spend about ' + h + ' hours a week on this task alone.'; },
+    pref: function (p) { return 'by ' + p.toLowerCase(); }
+  } : {
+    other: '기타', missing: '아직 비어 있어요: ', emailFmt: '이메일 형식', consent: '개인정보 동의', sending: '보내는 중…',
+    hours: function (h) { return '이 업무에만 주당 약 ' + h + '시간을 쓰고 계세요.'; },
+    pref: function (p) { return p + particle(p); }
+  };
+
   /* ── 탭 ─────────────────────────────────────── */
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
   var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
@@ -52,7 +64,7 @@
     var form = box.closest('form');
     form.addEventListener('change', function (e) {
       if (e.target.name !== name) return;
-      var other = form.querySelector('[name="' + name + '"][value="기타"]');
+      var other = form.querySelector('[name="' + name + '"][value="' + T.other + '"]');
       var show = other && other.checked;
       box.hidden = !show;
       if (show) box.querySelector('input').focus();
@@ -88,7 +100,7 @@
         } else if (!el.value.trim()) {
           problems.push(labelOf(el));
         } else if (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) {
-          problems.push('이메일 형식');
+          problems.push(T.emailFmt);
         }
       });
 
@@ -100,7 +112,7 @@
       });
 
       var unique = problems.filter(function (p, i) { return problems.indexOf(p) === i; });
-      errBox.textContent = unique.length ? '아직 비어 있어요: ' + unique.join(', ') : '';
+      errBox.textContent = unique.length ? T.missing + unique.join(', ') : '';
       if (unique.length) {
         var first = step.querySelector(':invalid, input[required]:not(:checked)');
         if (first && first.type !== 'radio' && first.type !== 'checkbox') first.focus();
@@ -111,14 +123,14 @@
     function labelOf(el) {
       var fs = el.closest('fieldset');
       if (fs && fs.querySelector('legend')) return cleanLabel(fs.querySelector('legend'));
-      if (el.type === 'checkbox' && el.name === 'consent') return '개인정보 동의';
+      if (el.type === 'checkbox' && el.name === 'consent') return T.consent;
       var lab = form.querySelector('label[for="' + el.id + '"]');
       return lab ? cleanLabel(lab) : el.name;
     }
     function cleanLabel(node) {
       var clone = node.cloneNode(true);
       clone.querySelectorAll('.req, .opt').forEach(function (n) { n.remove(); });
-      return clone.textContent.trim().replace(/\?$/, '').slice(0, 24);
+      return clone.textContent.trim().replace(/\?$/, '').slice(0, EN ? 48 : 24);
     }
 
     form.addEventListener('click', function (e) {
@@ -137,7 +149,7 @@
       if (hp && hp.value) return; // 봇이 숨김 칸을 채운 경우
 
       var btn = form.querySelector('[data-submit]');
-      btn.disabled = true; btn.textContent = '보내는 중…';
+      btn.disabled = true; btn.textContent = T.sending;
 
       var payload = collect(form, type);
       send(payload).then(function (ok) {
@@ -160,7 +172,7 @@
       // "기타" 선택 시 직접 입력값을 본 항목에 합친다
       ['industry', 'tasks', 'tools'].forEach(function (k) {
         var other = data[k + '_other'];
-        if (data[k] && data[k].indexOf('기타') !== -1 && other) data[k] = data[k].replace('기타', '기타(' + other + ')');
+        if (data[k] && data[k].indexOf(T.other) !== -1 && other) data[k] = data[k].replace(T.other, T.other + '(' + other + ')');
         delete data[k + '_other'];
       });
       // 주당 시간: 빈도 구간 중앙값 × 소요 구간 중앙값 ÷ 60 (산수만, 판단값 아님)
@@ -172,10 +184,10 @@
 
     function fillDone(done, form, payload) {
       var pref = done.querySelector('[data-contact-pref]');
-      if (pref && payload.contact_pref) pref.textContent = payload.contact_pref + particle(payload.contact_pref);
+      if (pref && payload.contact_pref) pref.textContent = T.pref(payload.contact_pref);
       var hours = done.querySelector('[data-hours]');
       if (hours && payload.weekly_hours) {
-        hours.textContent = '이 업무에만 주당 약 ' + payload.weekly_hours + '시간을 쓰고 계세요.';
+        hours.textContent = T.hours(payload.weekly_hours);
         hours.hidden = false;
       }
     }

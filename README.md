@@ -5,11 +5,13 @@
 ## 구조
 
 ```
-index.html       메인: 히어로 + [진단하기|문의하기] 탭 + 카테고리 카드
-products.html    상품 4모델
-team.html        팀·조직
-log.html         기록(블로그·인스타)
-privacy.html     개인정보처리방침
+index.html       홈: 회사소개서 v0.5 순서의 세일즈 페이지 (히어로 → 질문 6 → 방식 → 4단계 → 제품 → 비교 → 4모델 → 관광 로드맵 → 대표 2인)
+diagnosis.html   진단하기·문의하기 탭 + 3단계 미니체크 폼 (옛 /#diagnosis, /#contact 링크는 index에서 자동 이동)
+products.html    상품 4모델 + 고객 여정 7단계 + 받으시는 것 + 완제품·실비·무상 CS 1개월
+team.html        공동대표 2인 + 도그푸딩 순환
+log.html         기록(메뉴에서 제외, 2026-09-10 — 블로그 URL·사례가 생기면 다시 연결)
+privacy.html     개인정보처리방침 (한국어만 — 영어 페이지에서는 "Privacy Policy (Korean)"으로 연결)
+en/              영어판 4쪽(index·diagnosis·products·team). 헤더 KO|EN 전환, hreflang. 문안은 한국어판을 번역한 것이라 한국어를 고치면 같이 고친다. 폼 문구는 js/form.js가 <html lang>으로 고른다
 css/style.css    공통 스타일
 js/form.js       탭 전환, 3단계 폼, 전송
 assets/          로고, 파비콘, OG 이미지
@@ -63,9 +65,9 @@ My가비아 → 도메인 → DNS 관리 → 레코드 수정. **MX 레코드(�
 - 네이버 서치어드바이저(https://searchadvisor.naver.com)에 `https://closai.kr` 등록, 사이트맵 `https://closai.kr/sitemap.xml` 제출
 - 구글 서치콘솔(https://search.google.com/search-console)에 동일하게 등록
 - `log.html`의 블로그 링크(`href="#"` 3곳)를 실제 URL로 교체
-- `index.html` 히어로의 정의 문장을 확정본으로 교체
+- `index.html` 제품 섹션의 목업 자리 2칸(운영자용·고객용)을 남지영 목업으로 교체 — 회사소개서 p6과 같은 이미지
 
 ## 규칙
 
 - 이 저장소는 **공개**다. 가격, 내부 문서, 개인 전화번호, 계약 정보는 넣지 않는다.
-- 회사 문안의 정본은 private 저장소 `closai-docs`다. 여기 문구는 그쪽을 따른다.
+- 회사 문안의 정본은 private 저장소 `closai-docs`다. 여기 문구는 그쪽을 따른다. 홈·상품·팀 문안은 `회사소개서/closai_company_profile.html`(v0.5)에서 그대로 가져왔다 — 소개서를 고치면 사이트도 같이 고친다.

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get diagnosed · Contact | Closai</title>
+  <meta name="description" content="A 2–3 minute mini-check on your repetitive work. We'll get in touch to set a date for the diagnosis meeting. Questions, partnerships and proposals welcome too.">
+  <link rel="canonical" href="https://closai.kr/en/diagnosis.html">
+  <link rel="alternate" hreflang="ko" href="https://closai.kr/diagnosis.html">
+  <link rel="alternate" hreflang="en" href="https://closai.kr/en/diagnosis.html">
+  <link rel="alternate" hreflang="x-default" href="https://closai.kr/diagnosis.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="closai">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Get diagnosed · Contact | Closai">
+  <meta property="og:description" content="A 2–3 minute mini-check to start your diagnosis meeting.">
+  <meta property="og:url" content="https://closai.kr/en/diagnosis.html">
+  <meta property="og:image" content="https://closai.kr/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..700;1,100..125,400..700&family=Caveat:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap-wide">
+    <a class="brand" href="/en/" aria-label="Closai home">
+      <img src="/assets/logo-symbol.png" srcset="/assets/logo-symbol@2x.png 2x" alt="closai">
+    </a>
+    <nav class="nav" aria-label="Main menu">
+      <a href="/en/#how">How</a>
+      <a href="/en/products.html">Products</a>
+      <a href="/en/team.html">Team</a>
+      <a class="lang" href="/diagnosis.html" hreflang="ko" lang="ko" aria-label="한국어">KO</a>
+      <a class="cta" href="/en/diagnosis.html" aria-current="page">Get diagnosed</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page" style="padding-top:40px">
+  <section class="tabs-section" id="diagnosis" aria-label="Get diagnosed and contact">
+    <div class="wrap" style="max-width:760px;margin-bottom:22px">
+      <div class="page-head" style="margin-bottom:0">
+        <span class="label">Diagnosis · Contact</span>
+        <h1>Let's meet first</h1>
+        <p class="lead" style="margin:0">In the first meeting we only listen. Proposals and quotes come after. Leave a 2–3 minute mini-check and we'll get in touch to set a date.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="tablist" role="tablist" aria-label="Get diagnosed or contact">
+        <button role="tab" id="tab-diagnosis" aria-selected="true" aria-controls="panel-diagnosis" data-hash="#diagnosis">Get diagnosed</button>
+        <button role="tab" id="tab-contact" aria-selected="false" aria-controls="panel-contact" data-hash="#contact" tabindex="-1">Contact</button>
+      </div>
+
+      <!-- Diagnosis: 17-question mini-check in 3 steps -->
+      <div class="tabpanel" role="tabpanel" id="panel-diagnosis" aria-labelledby="tab-diagnosis">
+        <form id="diagnosis-form" novalidate>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <ol class="steps" aria-hidden="true"><li data-active></li><li></li><li></li></ol>
+
+          <!-- Step 1: business and contact -->
+          <section class="form-step" data-step="1">
+            <div class="step-title">
+              <h2>Your business and contact</h2>
+              <span class="label">1 / 3</span>
+            </div>
+            <p class="intro">It takes 2–3 minutes. These questions help us learn what you do before the meeting.</p>
+
+            <div class="field">
+              <label class="q" for="company">Company / brand name<span class="req">*</span></label>
+              <input type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+
+            <fieldset class="field">
+              <legend class="q">Industry<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="industry" value="Tourism · wellness classes" required>Tourism · wellness classes</label>
+                <label><input type="radio" name="industry" value="Accommodation · tours">Accommodation · tours</label>
+                <label><input type="radio" name="industry" value="Beauty · medical">Beauty · medical</label>
+                <label><input type="radio" name="industry" value="Education · coaching">Education · coaching</label>
+                <label><input type="radio" name="industry" value="Online sales">Online sales</label>
+                <label><input type="radio" name="industry" value="Other">Other</label>
+              </div>
+              <div class="other-input" data-other-for="industry" hidden>
+                <input type="text" name="industry_other" placeholder="Describe your industry" aria-label="Other industry">
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">Team size<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="size" value="Solo" required>Solo</label>
+                <label><input type="radio" name="size" value="2–4">2–4</label>
+                <label><input type="radio" name="size" value="5–9">5–9</label>
+                <label><input type="radio" name="size" value="10+">10+</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="q" for="name">Your name<span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="grid-2">
+              <div class="field">
+                <label class="q" for="email">Email<span class="req">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
+              </div>
+              <div class="field">
+                <label class="q" for="phone">Phone<span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+82 10-0000-0000">
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend class="q">Preferred way to reach you<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="contact_pref" value="Email" required>Email</label>
+                <label><input type="radio" name="contact_pref" value="Phone">Phone</label>
+                <label><input type="radio" name="contact_pref" value="KakaoTalk">KakaoTalk</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">How did you hear about Closai?<span class="opt">optional</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="source" value="Instagram">Instagram</label>
+                <label><input type="radio" name="source" value="Blog">Blog</label>
+                <label><input type="radio" name="source" value="Search">Search</label>
+                <label><input type="radio" name="source" value="AI search (ChatGPT etc.)">AI search (ChatGPT etc.)</label>
+                <label><input type="radio" name="source" value="Referral">Referral</label>
+              </div>
+            </fieldset>
+
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <span></span>
+              <button type="button" class="btn" data-next>Next</button>
+            </div>
+          </section>
+
+          <!-- Step 2: repetitive work check -->
+          <section class="form-step" data-step="2" hidden>
+            <div class="step-title">
+              <h2>Repetitive work check</h2>
+              <span class="label">2 / 3</span>
+            </div>
+            <p class="intro">There are no right answers. Think back over the past week and pick what's true.</p>
+
+            <fieldset class="field">
+              <legend class="q">Which repetitive work took the most of your time last week?<span class="req">*</span><span class="opt">pick all that apply</span></legend>
+              <div class="chips">
+                <label><input type="checkbox" name="tasks" value="Answering inquiries (DM · KakaoTalk · email)">Answering inquiries (DM · KakaoTalk · email)</label>
+                <label><input type="checkbox" name="tasks" value="Bookings · scheduling">Bookings · scheduling</label>
+                <label><input type="checkbox" name="tasks" value="Content creation · publishing">Content creation · publishing</label>
+                <label><input type="checkbox" name="tasks" value="Settlement · bookkeeping">Settlement · bookkeeping</label>
+                <label><input type="checkbox" name="tasks" value="Quotes · proposals">Quotes · proposals</label>
+                <label><input type="checkbox" name="tasks" value="Customer follow-ups">Customer follow-ups</label>
+                <label><input type="checkbox" name="tasks" value="Other">Other</label>
+              </div>
+              <div class="other-input" data-other-for="tasks" hidden>
+                <input type="text" name="tasks_other" placeholder="What kind of work?" aria-label="Other task">
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="q" for="dreaded">Name one task you dread or keep putting off<span class="req">*</span></label>
+              <input type="text" id="dreaded" name="dreaded" required placeholder="e.g. Replying one by one to Instagram DMs piled up overnight">
+            </div>
+
+            <fieldset class="field">
+              <legend class="q">How many times a week do you do it?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="frequency" value="Under 5 times" data-mid="3" required>Under 5 times</label>
+                <label><input type="radio" name="frequency" value="5–20 times" data-mid="12">5–20 times</label>
+                <label><input type="radio" name="frequency" value="20–50 times" data-mid="35">20–50 times</label>
+                <label><input type="radio" name="frequency" value="50+ times" data-mid="60">50+ times</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">How long does one take?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="duration" value="Under 5 min" data-mid="3" required>Under 5 min</label>
+                <label><input type="radio" name="duration" value="5–15 min" data-mid="10">5–15 min</label>
+                <label><input type="radio" name="duration" value="15–30 min" data-mid="22">15–30 min</label>
+                <label><input type="radio" name="duration" value="30+ min" data-mid="40">30+ min</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">Out of ten times, how often does it need handling differently from usual?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="exceptions" value="1 or fewer" required>1 or fewer</label>
+                <label><input type="radio" name="exceptions" value="2–3">2–3</label>
+                <label><input type="radio" name="exceptions" value="4 or more">4 or more</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">Which tools do you use for it?<span class="req">*</span><span class="opt">pick all that apply</span></legend>
+              <div class="chips">
+                <label><input type="checkbox" name="tools" value="KakaoTalk">KakaoTalk</label>
+                <label><input type="checkbox" name="tools" value="Instagram DM">Instagram DM</label>
+                <label><input type="checkbox" name="tools" value="Naver Booking">Naver Booking</label>
+                <label><input type="checkbox" name="tools" value="Google Sheets · Excel">Google Sheets · Excel</label>
+                <label><input type="checkbox" name="tools" value="Notion">Notion</label>
+                <label><input type="checkbox" name="tools" value="Email">Email</label>
+                <label><input type="checkbox" name="tools" value="Paper · notes">Paper · notes</label>
+                <label><input type="checkbox" name="tools" value="Other">Other</label>
+              </div>
+              <div class="other-input" data-other-for="tools" hidden>
+                <input type="text" name="tools_other" placeholder="Which tool?" aria-label="Other tool">
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="q" for="goal">Three months from now, what would you like to be different?<span class="opt">optional</span></label>
+              <textarea id="goal" name="goal" rows="3" placeholder="e.g. I'd like bookings sorted on their own so I don't have to check my phone in the evening"></textarea>
+            </div>
+
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <button type="button" class="btn ghost" data-prev>Back</button>
+              <button type="button" class="btn" data-next>Next</button>
+            </div>
+          </section>
+
+          <!-- Step 3: meeting -->
+          <section class="form-step" data-step="3" hidden>
+            <div class="step-title">
+              <h2>Meeting</h2>
+              <span class="label">3 / 3</span>
+            </div>
+            <p class="intro">The diagnosis meeting happens once. From what we hear, we build a working sample and a report to show you.</p>
+
+            <fieldset class="field">
+              <legend class="q">Which format works for you?<span class="req">*</span></legend>
+              <div class="chips">
+                <label><input type="radio" name="meeting" value="In person (Seoul)" required>In person (Seoul)</label>
+                <label><input type="radio" name="meeting" value="Online">Online</label>
+                <label><input type="radio" name="meeting" value="Email first">Email first</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend class="q">Available times<span class="req">*</span><span class="opt">pick all that apply</span></legend>
+              <div class="chips">
+                <label><input type="checkbox" name="timeslot" value="Weekday mornings">Weekday mornings</label>
+                <label><input type="checkbox" name="timeslot" value="Weekday afternoons">Weekday afternoons</label>
+                <label><input type="checkbox" name="timeslot" value="Evenings">Evenings</label>
+                <label><input type="checkbox" name="timeslot" value="Weekends">Weekends</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="consent">
+                <input type="checkbox" name="consent" value="Agreed" required>
+                <span>I agree to the collection and use of the information above so Closai can contact me about the diagnosis. See the <a href="/privacy.html" hreflang="ko" target="_blank" rel="noopener">Privacy Policy (Korean)</a>.<span class="req">*</span></span>
+              </label>
+            </div>
+
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <button type="button" class="btn ghost" data-prev>Back</button>
+              <button type="submit" class="btn" data-submit>Send</button>
+            </div>
+          </section>
+
+          <!-- Done -->
+          <section class="form-step done" data-step="done" hidden aria-live="polite">
+            <p class="big">Thank you.<br>We'll get back to you <span data-contact-pref>by email</span> within 2 business days.</p>
+            <div class="hours" data-hours hidden></div>
+            <ol>
+              <li>We contact you to schedule the meeting.</li>
+              <li>One diagnosis meeting to sort out your repetitive work together.</li>
+              <li>We show you a working sample dashboard and the diagnosis report.</li>
+            </ol>
+            <p class="fallback" data-fallback hidden>If sending failed, email us directly at <a href="mailto:closai@closai.kr">closai@closai.kr</a>.</p>
+          </section>
+        </form>
+      </div>
+
+      <!-- Contact -->
+      <div class="tabpanel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" hidden>
+        <form id="contact-form" novalidate>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <section class="form-step" data-step="1">
+            <div class="step-title"><h2>Contact</h2></div>
+            <p class="intro">Questions before a diagnosis, partnerships and proposals go here.</p>
+            <div class="grid-2">
+              <div class="field">
+                <label class="q" for="c-name">Name<span class="req">*</span></label>
+                <input type="text" id="c-name" name="name" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label class="q" for="c-email">Email<span class="req">*</span></label>
+                <input type="email" id="c-email" name="email" required autocomplete="email" inputmode="email">
+              </div>
+            </div>
+            <div class="field">
+              <label class="q" for="c-message">Message<span class="req">*</span></label>
+              <textarea id="c-message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="field">
+              <label class="consent">
+                <input type="checkbox" name="consent" value="Agreed" required>
+                <span>I agree to the collection and use of the information above so Closai can reply. <a href="/privacy.html" hreflang="ko" target="_blank" rel="noopener">Privacy Policy (Korean)</a><span class="req">*</span></span>
+              </label>
+            </div>
+            <div class="form-error" aria-live="polite"></div>
+            <div class="form-actions">
+              <span></span>
+              <button type="submit" class="btn" data-submit>Send</button>
+            </div>
+          </section>
+          <section class="form-step done" data-step="done" hidden aria-live="polite">
+            <p class="big">Thank you.<br>We'll reply by email within 2 business days.</p>
+            <p class="fallback" data-fallback hidden>If sending failed, email us directly at <a href="mailto:closai@closai.kr">closai@closai.kr</a>.</p>
+          </section>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap-wide">
+    <img src="/assets/wordmark.png" srcset="/assets/wordmark@2x.png 2x" alt="closai">
+    <span class="tag">AI Automation Partner</span>
+    <div class="biz">
+      <span>Closai · CEO Nagyeong Lee · Co-founder Jiyeong Nam</span>
+      <span>Business registration no. 308-25-02133</span>
+      <span>201, 67 Donggyo-ro 17-gil, Mapo-gu, Seoul, Korea</span>
+      <span><a href="mailto:closai@closai.kr">closai@closai.kr</a></span>
+    </div>
+    <div class="links-row">
+      <a href="/privacy.html" hreflang="ko">Privacy Policy (Korean)</a>
+      <a href="https://www.instagram.com/closai.kr" target="_blank" rel="noopener">Instagram</a>
+      <span>© 2026 closai</span>
+    </div>
+  </div>
+</footer>
+<script src="/js/form.js" defer></script>
+</body>
+</html>
